@@ -1,0 +1,228 @@
+:root {
+    --primary-color: #ff00ae;
+    --text-color: #41373e;
+    --shadow-color: #d3a5c6;
+    --border-color: #eeee;
+}
+
+body {
+    font-family: "EB Garamond", serif;
+    line-height: 1.6;
+    /* พื้นหลังจุด */
+    background-color: #ffd8f2;
+    background-image: radial-gradient(white 8%, transparent 8%),
+                        radial-gradient(white 8%, transparent 8%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    background-repeat: repeat;
+    /* พื้นหลังจุด */
+    margin: 0;
+    padding: 0;
+    color: #41373e;
+    padding-top: 80px;
+}
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.nav-container {
+    background: white;
+    backdrop-filter: blur(12px);
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-color);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #909090;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    padding: 40px;
+    overflow: hidden;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    margin: 0 auto 20px;
+}
+
+h1 {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.subtitle {
+    /*text-align: center;*/
+    color: #909090;
+    margin-bottom: 15px;
+}
+
+p, li {
+    font-size: 1rem;
+}
+
+.skills-container,
+.soft-skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.skill-item,
+.soft-skill-item {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(198, 147, 179, 0.1);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-color);
+}
+
+.footer-section {
+    text-align: center;
+    padding: 40px 20px;
+    color: #909090;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.repository {
+    color: #909090;
+    text-decoration: none;
+    transition: all 0.2s;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-color);
+    padding: 5px 16px;
+    font-size: 0.95rem;
+    background: white;
+}
+
+@media (max-width: 768px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-container {
+        justify-content: center;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .profile-card {
+        padding: 20px; 
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .skills-container {
+        justify-content: center;
+    }
+    
+    .btn-link {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+}
